@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+body {
+  background-color: #eee;
+}
+
+.globalHeader {
+  //   border: 1px solid red;
+
+  form {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    & > input {
+      width: 100%;
+      margin-right: 40px;
+
+      height: 30px;
+      border-radius: 5px;
+
+      padding-left: 10px;
+      box-shadow: 0px 2px 6px 0px #999;
+
+      &:hover {
+        border: 2px solid #338df6;
+      }
+    }
+    & > button {
+      white-space: nowrap;
+
+      padding: 0px 20px;
+      background-color: #338df6;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      color: white;
+      font-size: 16px;
+
+      box-shadow: 0px 2px 6px 0px #666;
+
+      &:hover {
+        border-color: rgb(4, 20, 163);
+      }
+    }
+  }
+}
+
+.siteList {
+  margin: 0 20px; //手机端有用，不能直接修改
+
+  display: flex;
+  flex-wrap: wrap;
+  //屏幕大于500px平均布局，否则均分布局
+  // justify-content: space-between;
+
+  // outline: 1px red solid;
+  & > li {
+    // outline: 1px solid black;
+
+    margin-bottom: 10px;
+  }
+  .site {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+    border-radius: 5px;
+    border-top-right-radius: 15px;
+    border: 1px solid #ddd;
+    padding-bottom: 10px;
+
+    position: relative;
+    left: 0px;
+    top: 0px;
+
+    & > .logo {
+      height: 64px;
+      width: 64px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 64px;
+    }
+
+    & > .icon {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      font-size: 28px;
+    }
+
+    & > .link {
+      font-size: 14px;
+      font-family: "Oleo Script Swash Caps", cursive;
+    }
+  }
+}
+// i.icon-hao {
+//   font-size: 40px;
+// }
+
+@media (min-width: 500px) {
+  .globalHeader form {
+    max-width: 400px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 60px;
+  }
+
+  .siteList {
+    margin-left: 0;
+    margin-right: -25px;
+  }
+
+  .siteList > li {
+    margin-right: 25px;
+  }
+
+  .siteList > li .icon-close {
+    display: none;
+  }
+
+  .siteList > li:hover {
+    box-shadow: 0px 2px 10px 2px #666;
+    cursor: pointer;
+  }
+
+  .siteList > li:hover .icon-close {
+    display: block;
+    cursor: default;
+  }
+}
+
+@media (max-width: 500px) {
+  .siteList {
+    justify-content: space-between;
+  }
+}
+
+.globalMain {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
