@@ -136,7 +136,7 @@ var getLogo = function getLogo(node) {
   if (node.logoType === "text") {
     return node.logo;
   } else {
-    return "<img src='".concat(node.logo, "' alt=").concat(node.urlPart.split(".")[0], "'.png' />");
+    return "<img src='".concat(node.logo, "' alt=").concat(node.urlPart.split(".")[0], ".png />");
   }
 };
 
@@ -210,4 +210,4 @@ $(document).on("keypress", function (e) {
   });
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.d41bdc4b.js.map
+//# sourceMappingURL=main.4fe9447c.js.map
