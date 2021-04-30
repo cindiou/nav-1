@@ -20,7 +20,7 @@ const getLogo = (node) => {
   if (node.logoType === "text") {
     return node.logo;
   } else {
-    return `<img src='${node.logo}' alt=${node.urlPart.split(".")[0]}'.png' />`;
+    return `<img src='${node.logo}' alt=${node.urlPart.split(".")[0]}.png />`;
   }
 };
 
